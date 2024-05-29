@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.home {
+    text-align: center;
+}
+
+.hero {
+    background-color: #333; /* Plain background color */
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e63e00;
+}
+
+.featured-concerts, .upcoming-events, .how-it-works, .contact-us {
+    padding: 40px 20px;
+}
+
+.featured-concerts h2, .upcoming-events h2, .how-it-works h2, .contact-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.concerts-list, .events-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.concert-card, .event-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: left;
+}
+
+.concert-card img, .event-card img {
+    width: 100%;
+    height: auto;
+    background-color: #ccc; /* Placeholder color for images */
+}
+
+.concert-info, .event-info {
+    padding: 15px;
+}
+
+.concert-info h3, .event-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.how-it-works .steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.how-it-works .step {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.how-it-works .step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-us p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
