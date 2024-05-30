@@ -1,6 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: white;
 }
 
 .home {
@@ -8,24 +10,24 @@ body {
 }
 
 .hero {
-    background-color: #333; /* Plain background color */
+    position: relative;
+    text-align: center;
     color: white;
-    padding: 50px 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 850px;
+    opacity: 0.7;
 }
 
 .hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
@@ -55,7 +57,11 @@ body {
     border-radius: 5px;
 }
 
-.featured-concerts, .upcoming-events, .how-it-works, .contact-us {
+.featured-concerts {
+    padding: 40px 20px;
+}
+
+.upcoming-events, .how-it-works, .contact-us {
     padding: 40px 20px;
 }
 
@@ -69,6 +75,7 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    color: #111111;
 }
 
 .concert-link, .event-link {
@@ -113,6 +120,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    color: #111111;
 }
 
 .how-it-works .step {

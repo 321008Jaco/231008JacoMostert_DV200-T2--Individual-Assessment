@@ -10,7 +10,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Cape Town',
                     ticketPrice: 500,
                     description: 'The largest jazz festival in Africa, featuring top international and local jazz artists.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://www.westerncape.gov.za/sites/www.westerncape.gov.za/files/greenmarket_square_was_packed_for_the_free_jazz_concert_photo_by_bruce_sutherland_5.jpg'],
                 },
                 {
                     id: '2',
@@ -20,7 +20,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Northam',
                     ticketPrice: 700,
                     description: 'A multi-genre music festival held annually in the mining town of Northam in Limpopo.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2018/07/11/085eb402-3b0d-4114-9709-503ea6750567/oppikoppi'],
                 },
                 {
                     id: '3',
@@ -30,7 +30,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Darling',
                     ticketPrice: 600,
                     description: 'One of the biggest and most well-known music festivals in South Africa, held in Darling.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://ycladmag.com/wp-content/uploads/2016/04/daisies.jpg'],
                 },
                 {
                     id: '4',
@@ -40,7 +40,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Tankwa Karoo',
                     ticketPrice: 1500,
                     description: 'An annual event that is the South African counterpart to the famous Burning Man festival.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZPxehGBmvDejIuOeO7JR3K6e2vskkjNVcNw&s'],
                 },
                 {
                     id: '5',
@@ -50,7 +50,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Johannesburg',
                     ticketPrice: 800,
                     description: 'The biggest electronic music festival in Africa, featuring top international DJs.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcZTIWKW8daQLfBj5tbYdQ3EdCvUxy_3w4iA&s'],
                 },
                 {
                     id: '6',
@@ -60,7 +60,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Cape Town',
                     ticketPrice: 550,
                     description: 'A beach festival celebrating music, dance, and the beauty of the sunset.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://www.joburgstyle.co.za/wp-content/uploads/2019/11/Featured-image-4.jpg'],
                 },
                 {
                     id: '7',
@@ -70,7 +70,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Cape Town',
                     ticketPrice: 300,
                     description: 'A series of outdoor concerts held in the beautiful Kirstenbosch Botanical Gardens.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://thecaperobyn.co.za/wp-content/uploads/2022/12/k-bosch-Dec-26-2022-2.jpg'],
                 },
                 {
                     id: '8',
@@ -80,7 +80,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Johannesburg',
                     ticketPrice: 400,
                     description: 'A popular electronic dance music event held at Wild Waters Complex.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://i.ytimg.com/vi/DcQXa-PE9Fs/maxresdefault.jpg'],
                 },
                 {
                     id: '9',
@@ -90,7 +90,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Underberg',
                     ticketPrice: 650,
                     description: 'The longest-running music festival in South Africa, held in the Drakensberg mountains.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://www.musicinafrica.net/sites/default/files/images/article/202110/splashyfen.jpg'],
                 },
                 {
                     id: '10',
@@ -100,7 +100,7 @@ export const fetchFeaturedConcerts = () => {
                     city: 'Johannesburg',
                     ticketPrice: 1000,
                     description: 'A food and music festival that features top chefs and international music acts.',
-                    images: ['https://via.placeholder.com/150'],
+                    images: ['https://www.levergy.co.za/wp-content/uploads/2018/02/9X4A8168.jpg'],
                 },
             ]);
         }, 1000);

@@ -11,7 +11,7 @@ const ItemList = () => {
 
     return (
         <div className="item-list">
-            <h2>Tickets for Sale</h2>
+            <h2>Listed Tickets</h2>
             <div className="tickets-container">
                 {tickets.length === 0 ? (
                     <p>No tickets available.</p>

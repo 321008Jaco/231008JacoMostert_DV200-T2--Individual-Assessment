@@ -15,11 +15,10 @@ const Home = () => {
             const concerts = await fetchFeaturedConcerts();
             setFeaturedConcerts(concerts);
 
-            // Filter concerts happening in May and June
             const mayAndJuneEvents = concerts.filter(concert => {
                 const concertDate = new Date(concert.date);
                 const month = concertDate.getMonth();
-                return month === 4 || month === 5; // May is month 4, June is month 5 (0-indexed)
+                return month === 4 || month === 5;
             });
 
             setUpcomingEvents(mayAndJuneEvents);
@@ -44,6 +43,7 @@ const Home = () => {
     return (
         <div className="home">
             <section className="hero">
+                    <img src="https://static.euronews.com/articles/stories/06/86/00/24/1440x810_cmsv2_e7deea0f-eb56-54d3-94c5-af69b8e5f5dc-6860024.jpg" alt="Concert Booking" className="hero-image" />               
                 <div className="hero-content">
                     <h1>Welcome to Concert Booking Portal</h1>
                     <p>Find and book your favorite concerts easily.</p>
