@@ -1,13 +1,7 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .create-item {
     padding: 40px 20px;
     max-width: 600px;
     margin: 0 auto;
-    text-align: left;
 }
 
 .create-item h2 {
@@ -22,16 +16,21 @@ body {
 
 .form-group label {
     display: block;
+    font-size: 18px;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
 }
 
 .submit-button {
@@ -42,8 +41,6 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%;
-    border-radius: 5px;
 }
 
 .submit-button:hover {

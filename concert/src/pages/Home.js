@@ -1,7 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { fetchFeaturedConcerts } from '../Sources/MockAPI';
 import './Home.css';
 
 const Home = () => {
+    const [featuredConcerts, setFeaturedConcerts] = useState([]);
+    const [upcomingEvents, setUpcomingEvents] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchConcerts = async () => {
+            setLoading(true);
+            const concerts = await fetchFeaturedConcerts();
+            setFeaturedConcerts(concerts);
+
+            // Filter concerts happening in May and June
+            const mayAndJuneEvents = concerts.filter(concert => {
+                const concertDate = new Date(concert.date);
+                const month = concertDate.getMonth();
+                return month === 4 || month === 5; // May is month 4, June is month 5 (0-indexed)
+            });
+
+            setUpcomingEvents(mayAndJuneEvents);
+            setLoading(false);
+        };
+
+        fetchConcerts();
+    }, []);
+
+    const handleSearch = (e) => {
+        setSearchQuery(e.target.value);
+    };
+
+    const filteredConcerts = featuredConcerts.filter(concert =>
+        concert.concertName.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className="home">
             <section className="hero">
@@ -12,41 +51,57 @@ const Home = () => {
                 </div>
             </section>
 
+            <section className="search-bar">
+                <input
+                    type="text"
+                    placeholder="Search concerts..."
+                    value={searchQuery}
+                    onChange={handleSearch}
+                />
+            </section>
+
             <section className="featured-concerts">
                 <h2>Featured Concerts</h2>
                 <div className="concerts-list">
-                    <div className="concert-card">
-                        <img src="#" alt="Concert 1" />
-                        <div className="concert-info">
-                            <h3>Concert 1</h3>
-                            <p>Date: June 15, 2024</p>
-                            <p>Location: New York</p>
-                        </div>
-                    </div>
-                    <div className="concert-card">
-                        <img src="#" alt="Concert 2" />
-                        <div className="concert-info">
-                            <h3>Concert 2</h3>
-                            <p>Date: July 20, 2024</p>
-                            <p>Location: Los Angeles</p>
-                        </div>
-                    </div>
+                    {filteredConcerts.length === 0 ? (
+                        <p>No concerts available.</p>
+                    ) : (
+                        filteredConcerts.map((concert) => (
+                            <Link to={`/detail/${concert.id}`} key={concert.id} className="concert-link">
+                                <div className="concert-card">
+                                    <img src={concert.images[0]} alt={concert.concertName} />
+                                    <div className="concert-info">
+                                        <h3>{concert.concertName}</h3>
+                                        <p><strong>Date:</strong> {concert.date}</p>
+                                        <p><strong>Time:</strong> {concert.time}</p>
+                                        <p><strong>City:</strong> {concert.city}</p>
+                                        <p><strong>Price:</strong> R{concert.ticketPrice}</p>
+                                        <p>{concert.description}</p>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))
+                    )}
                 </div>
             </section>
 
             <section className="upcoming-events">
-                <h2>Upcoming Events</h2>
+                <h2>Upcoming Events in May and June</h2>
                 <div className="events-list">
-                    <div className="event-card">
-                        <h3>Event 1</h3>
-                        <p>Date: August 5, 2024</p>
-                        <p>Location: Chicago</p>
-                    </div>
-                    <div className="event-card">
-                        <h3>Event 2</h3>
-                        <p>Date: September 10, 2024</p>
-                        <p>Location: San Francisco</p>
-                    </div>
+                    {upcomingEvents.length === 0 ? (
+                        <p>No events available in May and June.</p>
+                    ) : (
+                        upcomingEvents.map((event) => (
+                            <Link to={`/detail/${event.id}`} key={event.id} className="event-link">
+                                <div className="event-card">
+                                    <h3>{event.concertName}</h3>
+                                    <p><strong>Date:</strong> {event.date}</p>
+                                    <p><strong>Location:</strong> {event.city}</p>
+                                    <p><strong>Price:</strong> R{event.ticketPrice}</p>
+                                </div>
+                            </Link>
+                        ))
+                    )}
                 </div>
             </section>
 

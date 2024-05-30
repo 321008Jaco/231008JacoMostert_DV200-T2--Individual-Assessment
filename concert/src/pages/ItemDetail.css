@@ -1,0 +1,47 @@
+.item-detail {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.item-detail h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.ticket-info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.ticket-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.ticket-images img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #e63e00;
+}

@@ -42,6 +42,19 @@ body {
     background-color: #e63e00;
 }
 
+.search-bar {
+    padding: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .featured-concerts, .upcoming-events, .how-it-works, .contact-us {
     padding: 40px 20px;
 }
@@ -58,6 +71,11 @@ body {
     flex-wrap: wrap;
 }
 
+.concert-link, .event-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .concert-card, .event-card {
     background-color: #f4f4f4;
     border-radius: 10px;
@@ -65,21 +83,30 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 250px;
     text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.concert-card img, .event-card img {
+.concert-card:hover, .event-card:hover {
+    transform: scale(1.05);
+}
+
+.concert-card img {
     width: 100%;
     height: auto;
-    background-color: #ccc; /* Placeholder color for images */
 }
 
-.concert-info, .event-info {
+.concert-info, .event-card {
     padding: 15px;
 }
 
 .concert-info h3, .event-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+.concert-info p, .event-card p {
+    margin: 5px 0;
 }
 
 .how-it-works .steps {
