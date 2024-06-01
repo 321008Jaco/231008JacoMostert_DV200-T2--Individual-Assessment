@@ -72,4 +72,7 @@ Welcome to the Concert Ticket Booking Portal! This project is a MERN (MongoDB, E
 
 ## Video Demonstration
 
-A video demonstration of the project can be found [here](#).
+A video demonstration of the project can be found below.
+
+https://github.com/321008Jaco/231008JacoMostert_DV200-T2--Individual-Assessment/assets/125361866/20f5bf5f-f199-44e9-9937-664c911136a0
+
