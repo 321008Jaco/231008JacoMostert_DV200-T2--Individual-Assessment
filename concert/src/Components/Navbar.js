@@ -11,8 +11,6 @@ const Navbar = () => {
                 <a href="/">Home</a>
                 <a href="/create">CreateItem</a>
                 <a href="/list">ItemList</a>
-                <a href="/detail">ItemDetail</a>
-                <a href="/edit">EditItem</a>
             </div>
             <div className="search-bar">
                 <input type="text" placeholder="Search..." />

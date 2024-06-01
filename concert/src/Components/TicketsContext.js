@@ -20,6 +20,24 @@ export const TicketsProvider = ({ children }) => {
         });
     };
 
+    const deleteTicket = (id) => {
+        setTickets((prevTickets) => {
+            const updatedTickets = prevTickets.filter(ticket => ticket.id !== id);
+            localStorage.setItem('tickets', JSON.stringify(updatedTickets));
+            return updatedTickets;
+        });
+    };
+
+    const editTicket = (id, updatedTicket) => {
+        setTickets((prevTickets) => {
+            const updatedTickets = prevTickets.map(ticket => 
+                ticket.id === id ? { ...ticket, ...updatedTicket } : ticket
+            );
+            localStorage.setItem('tickets', JSON.stringify(updatedTickets));
+            return updatedTickets;
+        });
+    };
+
     return (
         <TicketsContext.Provider value={{ tickets, addTicket }}>
             {children}

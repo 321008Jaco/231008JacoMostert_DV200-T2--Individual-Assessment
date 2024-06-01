@@ -3,11 +3,20 @@ import { TicketsContext } from '../Components/TicketsContext';
 import './ItemList.css';
 
 const ItemList = () => {
-    const { tickets } = useContext(TicketsContext);
+    const { tickets, deleteTicket, editTicket } = useContext(TicketsContext);
 
     useEffect(() => {
         console.log("Tickets in ItemList:", tickets);
     }, [tickets]);
+
+    const handleDelete = (id) => {
+        deleteTicket(id);
+    };
+
+    const handleEdit = (id) => {
+        // Placeholder for edit logic
+        console.log("Edit ticket:", id);
+    };
 
     return (
         <div className="item-list">
@@ -30,6 +39,10 @@ const ItemList = () => {
                                 {ticket.images.map((image, index) => (
                                     <img key={index} src={image} alt={`Ticket ${index + 1}`} />
                                 ))}
+                            </div>
+                            <div className="ticket-actions">
+                                <button onClick={() => handleEdit(ticket.id)} className="edit-button">Edit</button>
+                                <button onClick={() => handleDelete(ticket.id)} className="delete-button">Delete</button>
                             </div>
                         </div>
                     ))
