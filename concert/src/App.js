@@ -11,6 +11,10 @@ import { TicketsProvider } from './Components/TicketsContext';
 import './App.css';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.withCredentials = true
 
 function App() {
     return (
